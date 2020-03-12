@@ -1,0 +1,46 @@
+extends ../layouts/default.pug
+
+block variables
+ -var pageTitle='Главная'
+
+block content
+  .rectangle
+  header
+    .menu
+      .logo
+        +icon('logo_1', 'svg')
+      .menu-center
+        .menu-div
+          a(href="#") О нас
+            p Кто мы и как работаем
+        .menu-div
+          a(href="#") Продукция
+            p Сыры, масла, сыворотка
+        .menu-div
+            a(href="#") Где купить
+              p На полках магазинов
+      menu.right  
+        +icon('navigation', 'svg')
+    .menu-bottom-item
+      .menu-bottom
+        .div-a
+          a(href="#") О нас
+        .div-a
+          a(href="#") Как мы это делаем
+        .div-a
+          a(href="#") Партнерам
+      .product
+        h1 Продукция завода «Гиагинский» представлена во всех федеральных сетях, а потребители знают и ищут именно наш бренд.
+  .content
+    .block-wt
+      h1 За 2019 год мы произвели:
+      .wt
+        h1 4525
+          sup тонн
+      .wt
+        h1 1359 
+          sup тонн
+      .wt
+        h1 2126
+          sup тонн
+    .rectangle-336
