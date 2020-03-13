@@ -10,18 +10,18 @@ block content
       .logo
         +icon('logo_1', 'svg')
       .menu-center
-        .menu-div
+        .menu-link
           a(href="#") О нас
             p Кто мы и как работаем
-        .menu-div
+        .menu-link
           a(href="#") Продукция
             p Сыры, масла, сыворотка
-        .menu-div
+        .menu-link
             a(href="#") Где купить
               p На полках магазинов
-      menu.right  
+      .hamburger  
         +icon('navigation', 'svg')
-    .menu-bottom-item
+    .container
       .menu-bottom
         .div-a
           a(href="#") О нас
@@ -32,15 +32,48 @@ block content
       .product
         h1 Продукция завода «Гиагинский» представлена во всех федеральных сетях, а потребители знают и ищут именно наш бренд.
   .content
-    .block-wt
-      h1 За 2019 год мы произвели:
+    .block-wt.container
+      .year
+        h1 За 2019 год мы произвели:
       .wt
         h1 4525
           sup тонн
+        p мягких и вытяжных сыров
       .wt
-        h1 1359 
+        h1 1359
           sup тонн
+        p масла и спреда
       .wt
         h1 2126
           sup тонн
-    .rectangle-336
+        p молочной сухой сыворотки
+      .download 
+        a(href="#") Скачать презентацию
+        .vector-193
+    .container
+      .entitlement
+        .text
+          h1 Имеем эксклюзивное право на производство Адыгейского сыра и производим по технологии НМПТ
+        .quality-mark
+          +icon('Слой-2', 'svg')
+      .eggs
+        .eggs-block
+          +icon('eggs-1', 'svg')
+        .eggs-block
+          +icon('eggs-2', 'svg')
+        .eggs-block   
+          +icon('eggs-3', 'svg')
+        .eggs-block-1
+          p Производственные процессы регламентированы системой менеджмента качества ИСО 9001:2008
+        .eggs-block-2
+          p Для всех партнеров проводим трейд-маркетинговую поддержку
+        .eggs-block-3
+          p Регулярно проводим презентации продуктов и новинок
+        .eggs-block
+          +icon('eggs-4', 'svg')
+        .eggs-block
+          +icon('eggs-5', 'svg')
+        .eggs-block-4
+          p Помогаем со стратегией развития направления сбыта и маркетинговым позиционированием
+        .eggs-block-5
+          p Самостоятельно осуществляем доставку продукции до распределительных центров
