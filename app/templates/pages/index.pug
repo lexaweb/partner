@@ -55,25 +55,126 @@ block content
         .text
           h1 Имеем эксклюзивное право на производство Адыгейского сыра и производим по технологии НМПТ
         .quality-mark
-          +icon('Слой-2', 'svg')
+          +icon('quality-mark', 'svg')
       .eggs
-        .eggs-block
-          +icon('eggs-1', 'svg')
-        .eggs-block
-          +icon('eggs-2', 'svg')
-        .eggs-block   
-          +icon('eggs-3', 'svg')
-        .eggs-block-1
-          p Производственные процессы регламентированы системой менеджмента качества ИСО 9001:2008
-        .eggs-block-2
-          p Для всех партнеров проводим трейд-маркетинговую поддержку
-        .eggs-block-3
-          p Регулярно проводим презентации продуктов и новинок
-        .eggs-block
-          +icon('eggs-4', 'svg') 
-        .eggs-block
-          +icon('eggs-5', 'svg')
-        .eggs-block-4
-          p Помогаем со стратегией развития направления сбыта и маркетинговым позиционированием
-        .eggs-block-5
-          p Самостоятельно осуществляем доставку продукции до распределительных центров
+        .square
+        .eggs-row
+          .eggs-block
+            +icon('eggs-1', 'svg')
+            p Производственные процессы регламентированы системой менеджмента качества ИСО 9001:2008
+          .eggs-block
+            +icon('eggs-2', 'svg')
+            p Для всех партнеров проводим трейд-маркетинговую поддержку
+          .eggs-block   
+            +icon('eggs-3', 'svg')
+            p Регулярно проводим презентации продуктов и новинок
+          .eggs-block
+            +icon('eggs-4', 'svg') 
+            p Помогаем со стратегией развития направления сбыта и маркетинговым позиционированием
+          .eggs-block
+            +icon('eggs-5', 'svg')
+            p Самостоятельно осуществляем доставку продукции до распределительных центров
+          .eggs-block
+            +icon('eggs-6', 'svg')        
+  .request 
+    .container
+      h1 Задайте вопрос или оставьте заявку на сотрудничество  
+      .form
+        form.application(action="", method="post")  
+          .item
+            .name
+              input(type="text" name="name" placeholder="Ваше имя")
+            .phone
+              input(type="text" name="phone" placeholder="Ваш телефон")
+            .email
+              input(type="text" name="email" placeholder="Ваша почта для ответа")
+          .item
+            .question
+              textarea(name=question, cols="30", rows="10" placeholder="Ваш вопрос")
+        .otpravka
+          .item
+            .item-checkbox
+              input(type="checkbox", name="price-list", id="check1")
+              label(for="check1")
+              label.text(for="") Хочу получить прайс-лист
+            .item-checkbox
+              input(type="checkbox", name="consent", id="check2")
+              label(for="check2")
+              label.text(for="") Согласие на обработку персональных данных в соответствии с 
+                a(href="#")  политикой конфиденциальности
+          .item-submit
+            input(type="submit", value="Отправить +")
+      .about-us
+        .about-us-item
+          .item
+            h1 О нас
+          .item 
+            a(href="#")
+              +icon('Group-107', 'svg')
+      .subscription
+        .item
+          h1 Подпишитесь на нас
+        .item
+          form.form-subscription(action="", method="post")
+            .box-email
+              input.email(type="email", name="email" placeholder="Введите почту")
+              .sending
+                input(type="submit", value="")
+    marquee НЕ СПАМИМ! ТОЛЬКО ПОЛЕЗНЫЙ КОНТЕНТ  ∙  НЕ СПАМИМ! ТОЛЬКО ПОЛЕЗНЫЙ КОНТЕНТ  ∙  НЕ СПАМИМ! ТОЛЬКО ПОЛЕЗНЫЙ КОНТЕНТ   ∙  НЕ СПАМИМ! ТОЛЬКО ПОЛЕЗНЫЙ КОНТЕНТ 
+  .request 
+    .container
+      footer
+        .footer-menu
+          .item-product
+            .menu-link
+              a(href="#") Продукция
+                p Сыры, масла, сыворотка
+            .menu-about-us
+              a(href="#") О нас
+                p Кто мы и как работаем
+          .item
+            a(href="#") Политика конфиденциальности
+            a(href="#")  Положение о персональных данных 
+            a(href="#") СОУТ
+          .item-menu  
+            .menu-link-right
+              a(href="#") Где купить
+              a(href="#") Новости и акции
+              a(href="#") Партнерам
+              a(href="#") Контакты
+        .information
+          .address
+            span Адрес
+            p 385600, Россия, Республика Адыгея, Гиагинский район, станица Гиагинская, ул. Ленина, 142
+          .office-hours
+            span Часы работы
+            p Понедельник ­–­­ Пятница 8:00 ­–­­ 17:00
+          .weekend
+            span Выходные дни
+            p Суббота, Воскресенье
+          .number 
+            span Служба поддержки потребителей
+            a.tel(href="tel:+") 8 800 250-93-93
+            a.question(href="#") Задать вопрос
+          .social 
+            p Мы в социальных сетях
+            .social-icon
+              a(href="#")
+                +icon('social-instagram', 'svg')
+              a(href="#")
+                +icon('social-vk', 'svg')
+              a(href="#")
+                +icon('social-twitter', 'svg')
+              a(href="#")
+                +icon('social-facebook', 'svg')
+              a(href="#")
+                +icon('social-ok', 'svg')
+              a(href="#")
+                +icon('social-wikipedia', 'svg')
+        .copyright
+          .item-title
+            p © ОАО Молочный завод «Гиагинский» 2020 г.
+          .item-link
+            p Сделано в 
+              a(href="#") CloudMill
+ 

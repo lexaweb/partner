@@ -191,3 +191,6 @@
 
    - png-спрайты можно будет использовать прописав класс `icon-{file-name}`
    - svg-спрайты можно будет использовать прописав класс `svg-{file-name}`
+
+sudo npm install gulp-cli --global
+npm rebuild node-sass
