@@ -15,9 +15,10 @@
   }
   
   .menu {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 1250px;
+    width: 90%;
     margin: 0 auto;
   }
   
@@ -28,12 +29,24 @@
     justify-content: center;
     position: relative;
     h1 {
-      font-family: PFRegalTextPro;
-      font-weight: 700;
-      font-size: 52px;
-      line-height: 52px;
+      font: 700 52px/52px 'PFRegalTextPro';
       color: #312930;
       z-index: 2;
+
+      span {
+        position: relative;
+        &:before {
+          content: '';
+          background-image: url('../images/Vector-131.svg');
+          background-size: cover;
+          position: absolute;
+          width: 407px;
+          height: 74px;
+          left: -20px;
+          bottom: 0;
+          z-index: -1;
+        }
+      }
     }
 
     &:after {
@@ -41,25 +54,15 @@
       background-image: url('../images/Vector-130.svg');
       background-size: cover;
       position: absolute;
-      top: -37%;
+      bottom: 10%;
       width: 1289.49px;
       height: 402.27px;
-      right: -46%;
+      right: -48%;
       z-index: 1;
     }
   
 
-  &:before {
-    content: '';
-    background-image: url('../images/Vector-131.svg');
-    background-size: cover;
-    position: absolute;
-    width: 407px;
-    height: 74px;
-    right: 24%;
-    top: -19px;
-    z-index: 1;
-  }
+ 
 }
   
 .container {
@@ -67,15 +70,13 @@
   margin: 0 auto;
 
   .menu-bottom {
-    font-family: CeraPro;
-    font-size: 25px;
-    line-height: 31px;
+    font: 25px/31px 'CeraPro';
     display: flex;
     justify-content: flex-start;
     color: #312930;
     margin-top: 100px;
   }
-    .div-a {
+    .header-menu-link {
       margin-right: 50px;
       z-index: 3;
 
@@ -110,7 +111,7 @@
   .menu-center {
     display: flex;
     justify-content: space-between;
-    flex-basis: 50%;
+    align-items: center;
   }
     .logo {
       align-items: flex-start;
@@ -123,33 +124,29 @@
     }
   
       .menu-link {
-        margin: 15px auto;
-        font-family: CeraPro;
-        line-height: 33px;
         color: #312930;
         text-align: center;
-      }
-  
+        justify-content: center;
+
         a {
           display: block;
-          font-size: 26px;
-          line-height: 33px;
+          font: 26px/33px 'CeraPro';
           p {
-            font-size: 13px;
-            line-height: 237.2%;
+            font: 13px/237.2% 'CeraPro';
           }
-          
+      }
+  
+    
        }
       } 
     
      
     .hamburger {
       padding: 0;
-      align-items: flex-start;
       margin: 0;
-      width: 78px;
-      height: 76px;
-  
+      cursor: pointer;
+      justify-self: self-end;
+      align-self: center;
       i {
   
         width: 100%;
@@ -168,14 +165,16 @@
     position: relative;
     z-index: 1;
   }
-  .wt {
+  .mass {
     position: relative;
     z-index: 1;
   }
 
     &:after {
       content: '';
-      background-image: url('../images/Rectangle-336.svg');
+      background: url('../images/Rectangle-336.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
       background-size: cover;
       position: absolute;
       top: 0;
@@ -199,22 +198,17 @@
     position: relative;
     z-index: 1;
     grid-column: 3/ -3;
-    font-family: CeraPro;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 237.2%;
+    font: 400 20px/237.2% 'CeraPro';
     color: #312930;
-    .vector-193 {
-      &:before {
-        content: '';
-        background-image: url('../images/Vector-193.svg');
-        background-size: cover;
-        position: absolute;
-        bottom: -3%;
-        right: 25%;
-        width: 1098px;
-        height: 609px;
-      }
+    &:before {
+      content: '';
+      background-image: url('../images/Vector-193.svg');
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      right: 15%;
+      width: 1098px;
+      height: 609px;
     }
 
     a {
@@ -231,6 +225,8 @@
         height: 20.57px;
         opacity: 1;
       }
+
+     
     
       // &:hover {
       //   &:after {
@@ -254,28 +250,20 @@
     .year {
       grid-column: 2 / -2;
       h1 {
-        font-family: PFRegalTextPro;
-        font-weight: 700;
         color: #312930;
-        font-size: 52px;
-        line-height: 52px;
+        font: 700 52px/52px 'PFRegalTextPro';
       }
     }
 
-    .wt {
+    .mass {
       grid-row: 2;
 
       h1 {
-        font-family: Lineatura;
-        font-weight: normal;
-        font-size: 110px;
-        line-height: 78px;
+        font: 400 110px/78px 'Lineatura';
         color: #EE7754;
 
         sup {
-          font-weight: 700;
-          font-size: 20px;
-          line-height: 30px;
+          font: 700 20px/30px 'Lineatura';
           top: -3.2em;
           margin-left: 9px;
         }
@@ -285,10 +273,7 @@
       p {
         position: relative;
         padding-left: 40px;
-        font-family: CeraPro;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 30px;
+        font: 400 20px/30px 'CeraPro';
         margin-top: 25px;
         color: #312930;
         &:after {
@@ -317,10 +302,7 @@
       z-index: 1;
       position: relative;
       h1 {
-        font-family: PFRegalTextPro;
-        font-weight: 700;
-        font-size: 52px;
-        line-height: 52px;
+        font: 700 52px/52px 'PFRegalTextPro';
         color: #312930;
       }
     }
@@ -341,10 +323,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 80px;
   grid-column-gap: 80px;
-  font-family: CeraPRO;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
+  font: 500 18px/24px 'CeraPRO';
   color: #312930;
 
   .square {
@@ -400,10 +379,7 @@
     padding-top: 120px;
     padding-bottom: 80px;
     max-width: 839px;
-    font-family: PFRegalTextPro;
-    font-weight: 700;
-    font-size: 52px;
-    line-height: 52px;
+    font: 700 52px/52px 'PFRegalTextPro';
     color: #312930;
   }
 
@@ -413,31 +389,19 @@
     justify-content: space-between;
 
     ::-webkit-input-placeholder {
-      font-family: CeraPro;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 30px;
+      font: 400 20px/30px 'CeraPro';
       color: #312930;
     }
     ::-moz-placeholder    {
-      font-family: CeraPro;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 30px;
+      font: 400 20px/30px 'CeraPro';
       color: #312930;
     }     
 :-moz-placeholder  {
-  font-family: CeraPro;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
+  font: 400 20px/30px 'CeraPro';
   color: #312930;
 }         
 :-ms-input-placeholder {
-  font-family: CeraPro;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
+  font: 400 20px/30px 'CeraPro';
   color: #312930;
 }
 
@@ -446,10 +410,7 @@
       width: 100%;
       padding-bottom: 20px;
       padding-top: 50px;
-      font-family: CeraPro;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 30px;
+      font: 400 20px/30px 'CeraPro';
       color: #312930;
 
       
@@ -466,10 +427,7 @@
           right: 0;
           color: #312930;
           top: 40px;
-          font-family: CeraPro;
-          font-weight: 400;
-          font-size: 12px;
-          line-height: 30px;
+          font: 400 12px/30px 'CeraPro';
         }
         textarea {
           padding-top: 40px;
@@ -490,10 +448,7 @@
         right: 0;
         color: #312930;
         bottom: 20px;
-        font-family: CeraPro;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 30px;
+        font: 400 12px/30px 'CeraPro';
       }
     }
   }
@@ -510,9 +465,7 @@
   .item-submit {
     width: 45%;
     margin-bottom: 40px;
-    font-family: CeraPro;
-    font-weight: 400;
-    font-size: 20px;
+    font: 400 20px 'CeraPro';
     color: #312930;
     position: relative;
 
@@ -534,10 +487,7 @@
 
   }
   .item-checkbox {
-    font-family: CeraPro;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
+    font: 400 14px/21px 'CeraPro';
     color: #312930;
     position: relative;
     margin-bottom: 40px;
@@ -611,9 +561,9 @@
         right: 0;
        
     }
+
   }
-    
-      
+         
   }
 }
 
@@ -623,7 +573,7 @@
   margin-top: 120px;
 }
 
-.about-us-item {
+.about-us-block {
   position: relative;
   max-width: 900px;
   margin: 0 auto;
@@ -631,6 +581,7 @@
   justify-content: space-between;
   align-items: center;
   height: 332px;
+ 
 
   &:after {
     content: '';
@@ -649,10 +600,7 @@
 
     h1 {
       padding: 0;
-      font-family: PFRegalTextPro;
-      font-weight: bold;
-      font-size: 52px;
-      line-height: 52px;
+      font: 700 52px/52px 'PFRegalTextPro';
       color: #312930;
     }
   }
@@ -669,10 +617,7 @@
     width: 35%;
 
     h1 {
-      font-family: PFRegalTextPro;
-      font-weight: bold;
-      font-size: 52px;
-      line-height: 40px;
+      font: 700 52px/40px 'PFRegalTextPro';
       color: #312930;
       padding: 0;
 
@@ -721,10 +666,7 @@
         .email {
           padding-bottom: 23px;
           border-bottom: 1px solid #312930;
-          font-family: CeraPro;
-          font-weight: normal;
-          font-size: 18px;
-          line-height: 21px;
+          font: 400 18px/21px 'CeraPro';
           color: #312930;
           width: 90%;
 
@@ -736,34 +678,22 @@
       }
 
       ::-webkit-input-placeholder { 
-        font-family: CeraPro;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 21px;
+        font: 400 18px/21px 'CeraPro';
         color: #312930;
 
       }
  
       :-moz-placeholder  {
-        font-family: CeraPro;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 21px;
+        font: 400 18px/21px 'CeraPro';
         color: #312930;
       }         
       :-ms-input-placeholder {
-        font-family: CeraPro;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 21px;
+        font: 400 18px/21px 'CeraPro';
         color: #312930;
       }
 
       :-ms-input-placeholder { 
-        font-family: CeraPro;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 21px;
+        font: 400 18px/21px 'CeraPro';
         color: #312930;
       }
 
@@ -773,10 +703,7 @@
 }
 
 marquee {
-  font-family: CeraPro;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
+  font: 700 14px/21px 'CeraPro';
   letter-spacing: 0.2em;
   color: #4BCC6A;
   position: absolute;
@@ -797,18 +724,12 @@ footer {
     align-items: center;
 
     .item-title {
-      font-family: CeraPro;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 26px;
+      font: 400 14px/26px 'CeraPro';
       color: #919191;
     }
 
     .item-link {
-      font-family: CeraPro;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 26px;
+      font: 400 14px/26px 'CeraPro';
       color: #312930;
       text-align: center;
       grid-column: 3/3;
@@ -827,10 +748,7 @@ footer {
     .item-menu {
       grid-row: 1/2;
       grid-column: 2/2;
-      font-family: CeraPro;     
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 44px;
+      font: 400 18px/44px 'CeraPro';
       color: #312930;
 
       .menu-link-right {
@@ -843,10 +761,7 @@ footer {
     }
 
     .item {
-      font-family: CeraPro;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 26px;
+      font: 400 14px/26px 'CeraPro';
       color: #312930;
 
       a {
@@ -865,10 +780,7 @@ footer {
       
       margin-bottom: 30px;
       a {
-        font-family: CeraPro;
-        font-weight: normal;
-        font-size: 34px;
-        line-height: 43px;
+        font: 400 34px/43px 'CeraPro';
         color: #312930;
         position: relative;
         &:hover {
@@ -899,10 +811,7 @@ footer {
       
       margin-bottom: 30px;
       a {
-        font-family: CeraPro;
-        font-weight: normal;
-        font-size: 34px;
-        line-height: 43px;
+        font: 400 34px/43px 'CeraPro';
         color: #312930;
         position: relative;
         &:hover {
@@ -920,20 +829,14 @@ footer {
         }
 
         p {
-          font-family: CeraPro;
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 237.2%;
+          font: 400 14px/237.2% 'CeraPro';
           color: #919191;
         }
       }
     }
 
     .menu-link-right {
-      font-family: CeraPro;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 44px;
+      font: 400 18px/44px 'CeraPro';
       color: #312930;
 
       a {
@@ -949,18 +852,12 @@ footer {
     grid-row-gap: 40px;
 
     span {
-      font-family: CeraPro; 
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 26px;
+      font: 400 14px/26px 'CeraPro';
       color: #919191;
     }
 
     p {
-      font-family: CeraPro;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 26px;
+      font: 400 16px/26px 'CeraPro';
       color: #312930;
       margin-top: 4px;
     }
@@ -978,19 +875,13 @@ footer {
       grid-row: 2/1;
 
       span {
-        font-family: CeraPro;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 26px;
+        font: 400 16px/26px 'CeraPro';
         color: #312930;
 
       }
 
       .tel {
-        font-family: CeraPro;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 26px;
+        font: 700 24px/26px 'CeraPro';
         color: #312930;
         padding: 0;
         display: block;
@@ -1002,10 +893,7 @@ footer {
       }
 
       .question {
-        font-family: CeraPro;
-        font-weight: normal;
-        font-size: 17px;
-        line-height: 40px;  
+        font: 400 17px/40px 'CeraPro';
         color: #312930;
         margin-top: 18px;
         position: relative;
@@ -1111,13 +999,12 @@ footer {
       }
 
       p {
-        font-family: CeraPro;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 26px;
+        font: 400 14px/26px 'CeraPro';
         color: #312930;
         margin: 0;
       }
     }
   }
 }
+
+@import "base/breakpoints";

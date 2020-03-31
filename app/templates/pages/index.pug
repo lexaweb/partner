@@ -1,14 +1,14 @@
 extends ../layouts/default.pug
 
 block variables
- -var pageTitle='Главная'
+ -var pageTitle='Партнерам'
 
 block content
-  .rectangle
   header
     .menu
       .logo
-        +icon('logo_1', 'svg')
+        a(href="#")
+          +icon('logo_1', 'svg')
       .menu-center
         .menu-link
           a(href="#") О нас
@@ -23,33 +23,34 @@ block content
         +icon('navigation', 'svg')
     .container
       .menu-bottom
-        .div-a
+        .header-menu-link
           a(href="#") О нас
-        .div-a
+        .header-menu-link
           a(href="#") Как мы это делаем
-        .div-a
+        .header-menu-link
           a(href="#") Партнерам
       .product
-        h1 Продукция завода «Гиагинский» представлена во всех федеральных сетях, а потребители знают и ищут именно наш бренд.
+        h1 Продукция завода 
+          span «Гиагинский» 
+          | представлена во всех федеральных сетях, а потребители знают и ищут именно наш бренд.
   .content
     .block-wt.container
       .year
         h1 За 2019 год мы произвели:
-      .wt
+      .mass
         h1 4525
           sup тонн
         p мягких и вытяжных сыров
-      .wt
+      .mass
         h1 1359
           sup тонн
         p масла и спреда
-      .wt
+      .mass
         h1 2126
           sup тонн
         p молочной сухой сыворотки
       .download 
         a(href="#") Скачать презентацию
-        .vector-193
     .container
       .entitlement
         .text
@@ -79,8 +80,8 @@ block content
   .request 
     .container
       h1 Задайте вопрос или оставьте заявку на сотрудничество  
-      .form
-        form.application(action="", method="post")  
+      form(action="", method="post")
+        .application  
           .item
             .name
               input(type="text" name="name" placeholder="Ваше имя")
@@ -96,16 +97,16 @@ block content
             .item-checkbox
               input(type="checkbox", name="price-list", id="check1")
               label(for="check1")
-              label.text(for="") Хочу получить прайс-лист
+              label.text(for="check1") Хочу получить прайс-лист
             .item-checkbox
               input(type="checkbox", name="consent", id="check2")
               label(for="check2")
-              label.text(for="") Согласие на обработку персональных данных в соответствии с 
+              label.text(for="check2") Согласие на обработку персональных данных в соответствии с 
                 a(href="#")  политикой конфиденциальности
           .item-submit
             input(type="submit", value="Отправить +")
       .about-us
-        .about-us-item
+        .about-us-block
           .item
             h1 О нас
           .item 

@@ -1,0 +1,117 @@
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/fancybox/dist/scss/jquery.fancybox";
+@import "../../node_modules/normalize.css/normalize";
+@import "base/fonts";
+@import "base/variables";
+@import "base/pngSprite";
+@import "base/svgSprite";
+@import "base/default";
+ 
+
+
+
+
+@include screen("lg", "max") {
+
+    header {
+        .menu {
+        max-width: 900px;
+        .menu-link {
+            a {
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+    }
+    
+    .container {
+        max-width: 800px;
+    }
+
+    .product {
+        &:after {
+            background-image: none;
+        }
+    }
+}
+
+@include screen("md", "max") {
+    
+    header {
+        .menu {
+            max-width: 700px;
+
+            .menu-link {
+                a {
+                    font: 21px/29px CeraPro;
+                }
+            }
+        }
+    }
+    
+    .container {
+        width: 80%;
+    }
+}
+
+@include screen("sm", "max") {
+    header {
+        padding-top: 20px;
+        margin: 0;
+        .menu {
+            max-width: 500px;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 80%;
+    .menu-link {
+        display: none;
+            }
+        }
+    }
+
+    .svg-icon {
+        font-size: 7px;
+    }
+
+    .container {
+        .menu-bottom {
+            font: 16px/20px CeraPro;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .header-menu-link {
+            margin: 0;
+        }
+    }
+
+    .product {
+            margin-top: 40px;
+            padding-bottom: 40px;
+        h1 {
+            font: 700 24px/110% PFRegalTextPro;
+
+            span {
+                &:before {
+                    background-image: none;
+                }
+
+            }
+        }
+    }
+
+    .content {
+        margin: 0;
+    }
+    
+     
+}
+
+
+// @include screen("xs", "max") {
+
+// }
+
+
+@import "base/mixins";
