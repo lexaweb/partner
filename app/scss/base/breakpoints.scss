@@ -35,6 +35,38 @@
             background-image: none;
         }
     }
+
+    .content {
+        height: 2500px;
+
+        .eggs {
+          .square {
+              display: none;
+          }  
+
+          .eggs-block {
+              .svg-eggs-6 {
+                  font-size: 5px;
+              }
+          }
+        }
+    }
+
+    .about-us-block {
+        height: 290px;
+        &:after {
+            background-image: none;
+        }
+    }
+
+    .subscription {
+        .item {
+            h1 {
+                font: 700 30px/110% PFRegalTextPro;
+            }
+        }
+        
+    }
 }
 
 @include screen("md", "max") {
@@ -54,6 +86,84 @@
     .container {
         width: 80%;
     }
+
+    .content {
+        .block-wt {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+			    "year year"
+                "mass-1 mass-2"  
+                "mass-3 mass-3"
+                "download download";
+            
+            .year {
+                grid-area: year;
+
+            }
+
+            .mass-1 {
+                grid-area: mass-1;
+                grid-row: 0;
+              }
+          
+              .mass-2 {
+                grid-area: mass-2;
+                grid-row: 0;
+              }
+          
+              .mass-3 {
+                grid-area: mass-3;
+                grid-row: 0;
+              }
+
+              .download {
+                  grid-area: download;
+
+                  &:before {
+                    bottom: -246%;
+                    right: 49%;
+                  }
+              }
+        }
+    }
+
+    footer {
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
+
+            .office-hours {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            .weekend {
+                grid-row: 2;
+            }
+
+            .number {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            .social {
+                grid-row: 3;
+                grid-column: 2;
+            }
+
+            .privacy {
+                grid-column: 1;
+                grid-row: 4;
+            }
+
+            .link-cloudmill {
+                grid-column: 3/2;
+            }
+
+            .copyright {
+                grid-column: 2/1;
+            }
+    }
+    
 }
 
 @include screen("sm", "max") {
@@ -103,15 +213,340 @@
 
     .content {
         margin: 0;
-    }
+            .block-wt {
+                padding-top: 0;
+                grid-template-columns: 1fr;
+                grid-row-gap: 20px;
+                grid-template-areas:
+                    "year"
+                    "mass-1"
+                    "mass-2"   
+                    "mass-3"
+                    "download";
+                
+                .year {
+                    grid-area: year;
+                    align-self: flex-end;
+                    justify-self: center;
+                    h1 {
+                        font: 700 18px/52px PFRegalTextPro;
+                    }
+                    
+                }
     
-     
+                .mass-1 {
+                    grid-area: mass-1;
+                    grid-row: 0;
+                    align-self: center;
+                    justify-self: center;
+                  }
+              
+                  .mass-2 {
+                    grid-area: mass-2;
+                    grid-row: 0;
+                    align-self: center;
+                    justify-self: center;
+                  }
+              
+                  .mass-3 {
+                    grid-area: mass-3;
+                    grid-row: 0;
+                    align-self: center;
+                    justify-self: center;
+                  }
+    
+                  .download {
+                      grid-area: download;
+                      align-self: center;
+                      justify-self: center;
+                      margin-top: 45px;
+    
+                  }
+          
+            }
+
+            .entitlement {
+                .text {
+                    h1 {
+                        font: 700 24px/110% PFRegalTextPro;
+                    }
+                }
+                .quality-mark {
+                        display: none;
+                       
+                    }
+                }        
+    }  
+
+    .eggs {
+        font: 500 16px/22px CeraPRO;
+        margin-top: 40px;
+        .eggs-row {
+            grid-template-columns: 1fr;
+            grid-row-gap: 20px;
+            .eggs-block {
+                height: 190px;
+            }
+           
+    }
 }
 
+.request {
+    margin: 0;
+    h1 {
+        font: 700 30px/110% PFRegalTextPro;
+    }
 
-// @include screen("xs", "max") {
+   .application {
+    padding-bottom: 50px;
+    .item { 
+        width: 100%;
+    }
+   } 
+}
 
-// }
+.otpravka {
+    .item {
+        width: 100%;
+    }
+}
+.about-us {
+    margin-top: 60px;
+.about-us-block {
+    height: 140px;
+    .item {
+        width: 100%;
+
+        h1 {
+            font: 700 18px/110% PFRegalTextPro;
+        }
+    }
+}
+}
+
+.subscription {
+    margin-top: 60px;
+    .item {
+        width: 100%;
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .form-subscription {
+            .box-email {
+                .email {
+                    width: 94%;
+                }
+            }
+        }
+    }
+    
+}
+
+footer {
+    padding-top: 60px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+      
+
+            .office-hours {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            .weekend {
+                grid-row: 3;
+                grid-column: 2;
+            }
+
+            .number {
+                grid-column: 1/3;
+                grid-row: 4;
+            }
+
+            .social {
+                grid-row: 6;
+                grid-column: 1/2;
+
+                .social-icon {
+                    .svg-icon {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .privacy {
+                grid-column: 1;
+                grid-row: 5;
+            }
+
+            .link-cloudmill {
+                grid-column: 3/1;
+                grid-row: 8;
+                text-align: left;
+            }
+
+            .copyright {
+                grid-column: 2/1;
+            }
+
+            .address {
+                grid-column: 1/3;
+                grid-row: 2;
+            }
+
+}
+   
+    
+
+
+}
+
+@include screen("xs", "max") {
+
+    .content {
+            .block-wt {
+                .year {
+                    align-self: flex-end;
+                    justify-self: normal;
+
+                }
+    
+                .mass-1 {
+                    align-self: normal;
+                    justify-self: normal;
+                  }
+              
+                  .mass-2 {
+                    align-self: normal;
+                    justify-self: normal;
+                  }
+              
+                  .mass-3 {
+                    align-self: normal;
+                    justify-self: normal;
+                  }
+    
+                  .download {
+                      align-self: center;
+                      justify-self: center;
+    
+                  }
+            }
+    }  
+
+    footer {
+
+        .address {
+            span {
+                font: 400 12px/26px CeraPro;
+            }
+
+            p {
+                font: 400 13px/140% CeraPro;
+            }
+        }
+
+     .office-hours  {
+
+        span {
+            font: 400 12px/26px CeraPro;
+        }
+
+        p {
+            font: 400 13px/140% CeraPro;
+        }
+            
+     }
+
+     .weekend {
+        span {
+            font: 400 12px/26px CeraPro;
+        }
+
+        p {
+            font: 400 13px/140% CeraPro;
+        }
+     }
+
+     .number {
+        span {
+            font: 400 12px/26px CeraPro;
+        }
+
+     }
+
+        .social {
+            grid-row: 6;
+            grid-column: 1/3;
+
+            p {
+                font: 400 12px/26px CeraPro;
+            }
+        }
+
+        .privacy {
+            grid-column: 1/3;
+            grid-row: 5;
+            font: 400 10px/26px CeraPro;
+        }
+
+        .copyright {
+            grid-column: 1/3;
+
+            .item-title {
+                font: 400 10px/26px CeraPro;
+            }
+        }
+
+        .link-cloudmill {
+            font: 400 10px/26px CeraPro;
+        }
+
+        .footer-menu {
+            grid-column: 1/3;
+            grid-row: 1;
+            .menu-link {
+                a {
+                    font: 400 20px/25px CeraPro;
+                    &:hover {
+                        &:after {
+                            background: url(../images/product.svg) 50% 0 no-repeat;
+                            background-size: contain;
+                            bottom: -15px;
+                        }
+                       
+                    }
+                    p {
+                        font: 400 12px/237.2% CeraPro;
+    
+                    }
+                }
+            }
+            
+            .menu-link-right {
+                font: 400 14px/35px CeraPro;
+            }
+    
+            .menu-about-us a {
+                font: 400 20px/25px CeraPro;
+                &:hover {
+                    &:after {
+                        background: url(../images/about-us.svg) 50% 0 no-repeat;
+                        background-size: contain;
+                        bottom: -15px;
+                    }
+                   
+                }
+                p {
+                    font: 400 12px/237.2% CeraPro;
+    
+                }
+            }
+        }
+
+    }
+}
 
 
 @import "base/mixins";
